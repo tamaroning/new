@@ -1,4 +1,5 @@
-# vue-page
+# vueの練習
+ポートフォリオにする予定
 
 ## Project setup
 ```
