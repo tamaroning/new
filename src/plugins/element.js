@@ -1,6 +1,6 @@
-import Vue from 'vue'
-import Element from 'element-ui'
+import ElementPlus from 'element-plus'
 import '../element-variables.scss'
-import locale from 'element-ui/lib/locale/lang/ja'
 
-Vue.use(Element, { locale })
+export default (app) => {
+  app.use(ElementPlus)
+}
