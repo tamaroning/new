@@ -11,7 +11,7 @@
         <li>
           <p>Undergraduate student at Kyoto Univ. (Apr 2021 - current)</p>
         </li>
-        <li><p>Major in computer science</p></li>
+        <li><p>Majoring in computer science</p></li>
       </ul>
 
       <h2>Interests</h2>
@@ -42,7 +42,7 @@
             <el-card>
               <h4>Trainee at National Security Camp 2021</h4>
               <p>
-                learned about malware analysis and implemented Shadow Stack on
+                Learned malware analysis and implemented Shadow Stack on
                 RISC-V emulator
               </p>
             </el-card>
@@ -50,7 +50,7 @@
           <el-timeline-item timestamp="Apr 2018 - Mar 2019" placement="top">
             <el-card>
               <h4>Trainee at SecHack365</h4>
-              <p>made a x86 emulator from scratch</p>
+              <p>Made a x86 emulator from scratch</p>
             </el-card>
           </el-timeline-item>
         </el-timeline>
@@ -102,6 +102,24 @@
           <el-tag type="info">PostgreSQL</el-tag>
         </el-descriptions-item>
       </el-descriptions>
+
+      <h2>Skills</h2>
+      <h3>Languages</h3>
+      <ul>
+        <li><p>Rust</p></li>
+        <li><p>C, C++, C#</p></li>
+        <li><p>Python</p></li>
+        <li><p>Javascript, PHP</p></li>
+      </ul>
+      <h3>Tools</h3>
+      <ul>
+        <li><p>Git</p></li>
+        <li><p>Makefile</p></li>
+        <li><p>Unity</p></li>
+        <li><p>Ruby on Rails</p></li>
+        <li><p>Vue.js, Nuxt.js</p></li>
+      </ul>
+
       <h2>Contibution</h2>
       <ul>
         <li>
@@ -114,7 +132,7 @@
         </li>
         <li>
           <p>
-            /richardanaya/tour_of_rust: PR
+            richardanaya/tour_of_rust: PR
             <el-link
               href="https://github.com/richardanaya/tour_of_rust/pull/410"
               >#410</el-link
@@ -123,11 +141,16 @@
           </p>
         </li>
       </ul>
-      
+
       <h2>Activities</h2>
       <ul>
-        <li><p>アプリ甲子園2018 first prize &amp; Minister of Internal Affairs and Communications Award</p></li>
-        <li><p>Unity Inter-High 2018 Gold Award</p></li>
+        <li>
+          <p>
+            アプリ甲子園2018, first prize &amp; Minister of Internal Affairs and
+            Communications Award
+          </p>
+        </li>
+        <li><p>Unity Inter-High 2018, Gold Award</p></li>
         <li><p>Speaker at TOKYO GAME SHOW 2018</p></li>
       </ul>
     </el-main>
