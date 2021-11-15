@@ -19,7 +19,7 @@
       <ul>
         <li><p>Language processors</p></li>
         <li><p>Low-level programming</p></li>
-        <li><p>Low-level software &amp; hardware securty</p></li>
+        <li><p>Low-level software &amp; hardware security</p></li>
       </ul>
 
       <h2>Activities</h2>
