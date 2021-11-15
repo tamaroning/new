@@ -17,11 +17,12 @@
       <h2>Interests</h2>
       <ul>
         <li><p>Language processors</p></li>
+        <li><p>Compiler optimization</p></li>
         <li><p>Low-level programming</p></li>
         <li><p>Low-level software &amp; hardware security</p></li>
       </ul>
 
-      <h2>Activities</h2>
+      <h2>Experiences</h2>
       <div class="block">
         <el-timeline>
           <el-timeline-item
@@ -46,7 +47,7 @@
               </p>
             </el-card>
           </el-timeline-item>
-          <el-timeline-item timestamp="Apr 2018 - Mar 2018" placement="top">
+          <el-timeline-item timestamp="Apr 2018 - Mar 2019" placement="top">
             <el-card>
               <h4>Trainee at SecHack365</h4>
               <p>made a x86 emulator from scratch</p>
@@ -122,11 +123,16 @@
           </p>
         </li>
       </ul>
+      
+      <h2>Activities</h2>
+      <ul>
+        <li><p>アプリ甲子園2018 first prize &amp; Minister of Internal Affairs and Communications Award</p></li>
+        <li><p>Unity Inter-High 2018 Gold Award</p></li>
+        <li><p>Speaker at TOKYO GAME SHOW 2018</p></li>
+      </ul>
     </el-main>
   </el-container>
 </template>
-
-
 
 <script>
 export default {
@@ -142,19 +148,19 @@ export default {
 }
 
 /* margin */
-@media screen and (min-width:480px) { 
+@media screen and (min-width: 480px) {
   .el-main {
     margin-left: 0;
     margin-right: 0;
   }
 }
-@media screen and (min-width:768px) and ( max-width:1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .el-main {
     margin-left: 50px;
     margin-right: 50px;
   }
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .el-main {
     margin-left: 200px;
     margin-right: 200px;
