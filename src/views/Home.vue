@@ -6,7 +6,7 @@
         src="https://www.tamaron.dev/img/icon-600px.png"
         fit="fill"
       ></el-image>
-      <h2>Raiki Tamura</h2>
+      <h2>Tamaron</h2>
       <ul>
         <li>
           <p>Undergraduate student at Kyoto Univ. (Apr 2021 - current)</p>
