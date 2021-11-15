@@ -1,7 +1,6 @@
 <template>
   <el-container>
     <el-main>
-      <h1>About Me</h1>
       <el-image
         style="width: 220px; height: 220px"
         src="https://www.tamaron.dev/img/icon-600px.png"
@@ -140,5 +139,25 @@ export default {
 <style>
 .el-main {
   text-align: left;
+}
+
+/* margin */
+@media screen and (min-width:480px) { 
+  .el-main {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  .el-main {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media screen and (min-width:1024px) {
+  .el-main {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 }
 </style>
