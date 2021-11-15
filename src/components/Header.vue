@@ -1,9 +1,6 @@
 <template>
     <header>
         <h1><a href="/">Home</a></h1>
-        <div id="form">
-            hedda- 
-        </div>
     </header>
 </template>
 <script>

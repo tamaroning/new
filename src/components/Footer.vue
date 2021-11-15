@@ -1,9 +1,9 @@
 <template>
     <footer>
-        <p>Powered by Vue.js</p>
+        <p>Powered by GitHub Pages</p>
         <ul>
             <li><a href="https://twitter.com/tamaroning">Twitter</a></li>
-            <li><a href="https://github.com/tamaroning">Github</a></li>
+            <li><a href="https://github.com/tamaroning">GitHub</a></li>
         </ul>
     </footer>
 </template>
