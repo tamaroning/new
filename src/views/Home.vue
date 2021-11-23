@@ -29,7 +29,7 @@
         <li><p>ガベージコレクタ、ARCをつくる</p></li>
         <li><p>xv6のソースコードを読む</p></li>
         <li>
-          <p>Ocamlを習得する</p>
+          <p>OCamlを習得する</p>
         </li>
       </ul>
     </el-main>
