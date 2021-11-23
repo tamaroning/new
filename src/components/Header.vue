@@ -2,6 +2,8 @@
   <el-container>
     <el-header>
       <el-link href="/">Home</el-link>
+      <el-link href="/portfolio">Profile</el-link>
+      <el-link href="https://tamaron.hatenablog.com/">Blog</el-link>
     </el-header>
   </el-container>
 </template>
@@ -11,7 +13,6 @@
   color: #eee;
   height: 50px;
   display: grid;
-  grid-template-columns: 20px 1fr 20px;
 }
 
 .el-link {
@@ -23,7 +24,6 @@
   .el-header {
     grid-template-columns: 1fr 700px 1fr;
   }
-
   #form {
     display: block;
   }

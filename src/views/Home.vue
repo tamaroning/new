@@ -2,23 +2,35 @@
   <el-container>
     <el-main>
       <el-image
-        style="width: 220px; height: 220px"
+        style="width: 260px; height: 260px"
         src="https://www.tamaron.dev/img/icon-600px.png"
         fit="fill"
       ></el-image>
-      <h2>Tamaron</h2>
-      <ul>
-        <li>
-          <p>Hi, everyone!</p>
-        </li>
-      </ul>
+      <h2>tamaron</h2>
+      <p>コンピュータが好きです</p>
 
-      <h2>Interests</h2>
+      <h2>やりたいこと</h2>
       <ul>
-        <li><p>Language processors</p></li>
-        <li><p>Compiler optimization</p></li>
-        <li><p>Low-level programming</p></li>
-        <li><p>Low-level software &amp; hardware security</p></li>
+        <li><p>TAPLを読む</p></li>
+        <li><p>静的型付け言語をつくる</p></li>
+        <li><p>型推論、型検査器をつくる</p></li>
+        <li>
+          <p>Rustコンパイラを読む</p>
+          <ul>
+            <li>THIRとHIR, 型検査</li>
+            <li>MIR, Borrow checking</li>
+            <li>Queries, Demand-driven compilation</li>
+            <li>Interning</li>
+            <li>ctx</li>
+          </ul>
+        </li>
+        <li><p>CPythonを読む</p></li>
+        <li>LLVM passを読む</li>
+        <li><p>ガベージコレクタ、ARCをつくる</p></li>
+        <li><p>xv6のソースコードを読む</p></li>
+        <li>
+          <p>Ocamlを習得する</p>
+        </li>
       </ul>
     </el-main>
   </el-container>
@@ -35,6 +47,7 @@ export default {
 <style>
 .el-main {
   text-align: left;
+  line-height: 1.5;
 }
 
 /* margin */
