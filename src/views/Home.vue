@@ -7,7 +7,8 @@
         fit="fill"
       ></el-image>
       <h2>tamaron</h2>
-      <p>コンピュータが好きです</p>
+      <p>京大情報学科B1</p>
+      <p>言語処理系, 低レイヤが好きです</p>
 
       <h2>やりたいこと</h2>
       <ul>
@@ -17,11 +18,11 @@
         <li>
           <p>Rustコンパイラを読む</p>
           <ul>
-            <li>THIRとHIR, 型検査</li>
+            <li>Parser, Lexer, AST</li>
+            <li>THIR, HIR, 型検査</li>
             <li>MIR, Borrow checking</li>
             <li>Queries, Demand-driven compilation</li>
             <li>Interning</li>
-            <li>ctx</li>
           </ul>
         </li>
         <li><p>CPythonを読む</p></li>
