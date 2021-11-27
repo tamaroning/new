@@ -3,7 +3,7 @@
     <el-main>
       <el-image
         style="width: 220px; height: 220px"
-        src="https://tamaroning.github.io/img/icon-600px.png"
+        src="https://github.com/tamaroning/tamaroning.github.io/blob/gh-pages/src/assets/icon-600px.png?raw=true"
         fit="fill"
       ></el-image>
       <h2>Tamaron</h2>
