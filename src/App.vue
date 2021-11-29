@@ -1,18 +1,18 @@
 <template>
-  <Header/>
+  <!--<Header/>-->
   <router-view/>
-  <Footer/>  
+  <!--<Footer/>-->  
 </template>
 <script>
 import 'normalize.css'
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+//import Header from "./components/Header"
+//import Footer from "./components/Footer"
 
 export default {
   name: 'App',
   components: {
-    Header,
-    Footer,
+    //Header,
+    //Footer,
   }
 }
 </script>

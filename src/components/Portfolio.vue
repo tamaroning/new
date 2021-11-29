@@ -42,8 +42,8 @@
             <el-card>
               <h4>Trainee at National Security Camp 2021</h4>
               <p>
-                Learned malware analysis and implemented Shadow Stack on
-                RISC-V emulator
+                Learned malware analysis and implemented Shadow Stack on RISC-V
+                emulator
               </p>
             </el-card>
           </el-timeline-item>
@@ -51,6 +51,25 @@
             <el-card>
               <h4>Trainee at SecHack365</h4>
               <p>Made a x86 emulator from scratch</p>
+            </el-card>
+          </el-timeline-item>
+        </el-timeline>
+      </div>
+
+      <h2>Education</h2>
+      <div class="block">
+        <el-timeline>
+          <el-timeline-item
+            timestamp="Apr 2021 - current"
+            placement="top"
+            color="#0bbd87"
+          >
+            <el-card>
+              <h4>Bachelor of Engineering at Kyoto University</h4>
+              <p>
+                Faculty of Engineering, School of Information and Mathematical
+                Science
+              </p>
             </el-card>
           </el-timeline-item>
         </el-timeline>
@@ -107,9 +126,9 @@
       <h3>Languages</h3>
       <ul>
         <li><p>Rust</p></li>
-        <li><p>C, C++, C#</p></li>
+        <li><p>C, C++</p></li>
         <li><p>Python</p></li>
-        <li><p>Javascript, PHP</p></li>
+        <li><p>Javascript</p></li>
       </ul>
       <h3>Tools</h3>
       <ul>
@@ -156,37 +175,3 @@
     </el-main>
   </el-container>
 </template>
-
-<script>
-export default {
-  data() {
-    return {};
-  },
-};
-</script>
-
-<style>
-.el-main {
-  text-align: left;
-}
-
-/* margin */
-@media screen and (min-width: 480px) {
-  .el-main {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .el-main {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .el-main {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-}
-</style>

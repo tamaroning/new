@@ -6,6 +6,7 @@ const routes = [
     name: 'Home',
     component: () => import('../views/Home.vue')
   },
+  /*
   {
     path: '/portfolio',
     name: 'Portfolio',
@@ -19,6 +20,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import('../views/About.vue')
   }
+  */
 ]
 
 const router = createRouter({

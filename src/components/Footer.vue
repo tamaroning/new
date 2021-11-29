@@ -3,7 +3,9 @@
     <el-footer>
       <p>Powered by GitHub Pages</p>
       <ul>
-        <li><el-link href="https://twitter.com/tamaroning">Twitter</el-link></li>
+        <li>
+          <el-link href="https://twitter.com/tamaroning">Twitter</el-link>
+        </li>
         <li><el-link href="https://github.com/tamaroning">GitHub</el-link></li>
       </ul>
     </el-footer>
