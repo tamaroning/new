@@ -6,13 +6,8 @@
         src="https://github.com/tamaroning/tamaroning.github.io/blob/gh-pages/src/assets/icon-600px.png?raw=true"
         fit="fill"
       ></el-image>
-      <h2>Tamaron</h2>
-      <ul>
-        <li>
-          <p>Undergraduate student at Kyoto Univ. (Apr 2021 - current)</p>
-        </li>
-        <li><p>Majoring in computer science</p></li>
-      </ul>
+      <h2>tamaron</h2>
+      <p>Hobby programmer</p>
 
       <h2>Interests</h2>
       <ul>
