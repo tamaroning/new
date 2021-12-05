@@ -111,18 +111,18 @@
 
         // マクロ
         macro println($a) {
-          kind($a) == expr => {
-            ty($a) == str => {
+          if_macro kind($a) == expr {
+            if_macro ty($a) == str {
               print_str($a);
             }
-            ty($a) == i32 => {
+            if_macro ty($a) == i32 {
               print_i32($a);
             }
-            defalut => {
+            else_macro {
               exit(-1);
             } 
           }
-          default => {
+          else_macro {
             exit(-1);
           }
         }
