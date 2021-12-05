@@ -95,37 +95,38 @@
         基本的な解析を行う(Live Variables, Dead Code)
       </ul>
       <h3>5. サンプルコード</h3>
-      // Hello World
-      func main() -> () {
-        println!("Hello World!");
-      }
+      <pre>
+        // Hello World
+        func main() -> () {
+          println!("Hello World!");
+        }
 
-      // 変数
-      func main() -> () {
-        // varはmutable, letはimmutable
-        var a = 40; // i32
-        let b = "Hello " + "World" + a.to_string(); // str型
-        println!(a); // macroによってstrもi32も受け付ける
-      }
+        // 変数
+        func main() -> () {
+          // varはmutable, letはimmutable
+          var a = 40; // i32
+          let b = "Hello " + "World" + a.to_string(); // str型
+          println!(a); // macroによってstrもi32も受け付ける
+        }
 
-      // マクロ
-      macro println($a) {
-        kind($a) == expr => {
-          ty($a) == str => {
-            print_str($a);
+        // マクロ
+        macro println($a) {
+          kind($a) == expr => {
+            ty($a) == str => {
+              print_str($a);
+            }
+            ty($a) == i32 => {
+              print_i32($a);
+            }
+            defalut => {
+              exit(-1);
+            } 
           }
-          ty($a) == i32 => {
-            print_i32($a);
-          }
-          defalut => {
+          default => {
             exit(-1);
-          } 
+          }
         }
-        default => {
-          exit(-1);
-        }
-      }
-
+      </pre>
     </el-main>
   </el-container>
 </template>
