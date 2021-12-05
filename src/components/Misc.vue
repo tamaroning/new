@@ -43,7 +43,9 @@
         <ul>
           <li>Array: [Type; size] : 静的に決まるサイズを持つ配列</li>
           <li>Tuple: (Type, Type, ..) : 0個以上の型の組</li>
-          <li>Slice : [Type] : 動的に決まるサイズを持つ配列(構造体で実装できそう)</li>
+          <li>
+            Slice : [Type] : 動的に決まるサイズを持つ配列(構造体で実装できそう)
+          </li>
         </ul>
         <li>関数型</li>
         <ul>
@@ -53,8 +55,7 @@
         <li>ユーザー定義型</li>
         <ul>
           <li>Struct: 構造体</li>
-          <li>Enum: 列挙型, Rustのように値を持てると良いと思う
-          </li>
+          <li>Enum: 列挙型, Rustのように値を持てると良いと思う</li>
         </ul>
         <li>ポインタ型</li>
         <ul>
@@ -70,10 +71,13 @@
       未定
       <ul>
         <li>GC(Nim,Python): プチフリーズが起きることがある。</li>
-        <li>ARC(Swift,Nim): </li>
+        <li>ARC(Swift,Nim):</li>
         <li>スマートポインタ(C++): 高速。Dangling Pointerが発生しない。</li>
         <li>ライフタイム(Rust): 高速。複雑なアノテーションが必要?</li>
-        <li>案1: 基本GC or ARCだが、高速動作のためGCを使わずにスマートポインタのみを用いたバイナリにコンパイル可能</li>>
+        <li>
+          案1: 基本GC or
+          ARCだが、高速動作のためGCを使わずにスマートポインタのみを用いたバイナリにコンパイル可能
+        </li>
       </ul>
       <h3>3. 構文に関して</h3>
       <ul>
@@ -84,49 +88,70 @@
       <h3>4. コンパイラアーキテクチャ</h3>
       Rustcを参考にする
       <ul>
-        <li>Token列: </li>
+        <li>Token列:</li>
         <li>AST: Token列をそのまま木の形にしたもの</li>
-        <li>HIR: ASTを解釈可能な形にしたもの
-          Hindley–Milner型推論を行う
+        <li>
+          HIR: ASTを解釈可能な形にしたもの Hindley–Milner型推論を行う
           https://doc.rust-lang.org/nightly/nightly-rustc/rustc_hir/enum.Node.html
         </li>
         <li>THIR: HIRに型推論を行ったもの</li>
-        <li>MIR: CFGの形をとる。LLVM-IRに簡単に変換可能。操作的意味論を表す。</li>
+        <li>
+          MIR: CFGの形をとる。LLVM-IRに簡単に変換可能。操作的意味論を表す。
+        </li>
         基本的な解析を行う(Live Variables, Dead Code)
       </ul>
       <h3>5. サンプルコード</h3>
-      <pre>
-        // Hello World
-        func main() -> () {
-          println!("Hello World!");
-        }
-
-        // 変数
-        func main() -> () {
-          // varはmutable, letはimmutable
-          var a = 40; // i32
-          let b = "Hello " + "World" + a.to_string(); // str型
-          println!(a); // macroによってstrもi32も受け付ける
-        }
-
-        // マクロ
-        macro println($a) {
-          if_macro kind($a) == expr {
-            if_macro ty($a) == str {
-              print_str($a);
+      暫定的なサンプルコードは以下にある。
+      <el-collapse v-model="activeNames">
+        <el-collapse-item title="Hello World" name="1">
+          <div><pre>
+            func main() -> () {
+              println!("Hello World!");
             }
-            if_macro ty($a) == i32 {
-              print_i32($a);
+          </pre></div>
+          <div>
+            main関数がエントリーポイント
+          </div>
+        </el-collapse-item>
+        <el-collapse-item title="変数" name="2">
+          <div><pre>
+            func main() -> () {
+              var a = 40; // i32
+              let b = "Hello " + "World" + a.to_string(); // str型
+              println!(a); // macroによってstrもi32も受け付ける
             }
-            else_macro {
-              exit(-1);
-            } 
-          }
-          else_macro {
-            exit(-1);
-          }
-        }
-      </pre>
+          </pre></div>
+          <div>
+            変数宣言: letはimmutable, varはmutable
+          </div>
+        </el-collapse-item>
+        <el-collapse-item title="マクロ" name="3">
+          <div><pre>
+            macro println($a: expr) {
+              if_macro ty($a) == str {
+                print_str($a);
+              } else_if_macro ty($a) == i32 {
+                print_i32($a);
+              } else_macro {
+                exit(-1);
+              } 
+            }
+          </pre></div>
+          <div>
+            マクロを用いることで関数のオーバーロードが出来る。
+            if_macro, else_macroはマクロ内制御構文。
+          </div>
+        </el-collapse-item>
+      </el-collapse>
     </el-main>
   </el-container>
 </template>
+<script>
+  export default {
+    data() {
+      return {
+        activeNames: null,
+      };
+    },
+  }
+</script>
