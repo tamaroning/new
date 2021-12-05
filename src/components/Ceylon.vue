@@ -8,21 +8,46 @@
         <li>Swift, Rust, C++, TypeScriptの良いところを取り入れたい</li>
         <li>開発スタート: 2021/12/05</li>
       </ul>
-      <h3>1. コンパイラアーキテクチャ</h3>
-      Rustcを参考にする
+      <h2>機能</h2>
+      <ul>
+          <li>変数, 関数</li>
+          <li>型システム: 静的型付け, 型検査, 型推論</li>
+          <li>型に対するメソッド定義</li>
+          <li>マクロ</li>
+          <li>名前空間</li>
+          <li>外部ライブラリのインポート</li>
+          <li>FFI</li>
+          <li>ARCによるメモリ管理</li>
+          <li>最適化</li>
+          <li>VM</li>
+          <li>LLVM-IRへの変換が可能(?)</li>
+      </ul>
+      <h1>1. コンパイラアーキテクチャ</h1>
+      <h2>ソースコード表現</h2>
       <ul>
         <li>Token列:</li>
         <li>AST: Token列をそのまま木の形にしたもの</li>
         <li>
-          HIR: ASTを解釈可能な形にしたもの Hindley–Milner型推論を行う
+          HIR: ASTを解釈可能な形にしたもの
           https://doc.rust-lang.org/nightly/nightly-rustc/rustc_hir/enum.Node.html
         </li>
         <li>THIR: HIRに型推論を行ったもの</li>
         <li>
           MIR: CFGの形をとる。LLVM-IRに簡単に変換可能。操作的意味論を表す。
         </li>
-        基本的な解析を行う(Live Variables, Dead Code)
       </ul>
+      <h2>コンパイルから実行まで</h2>
+      <ul>
+        <li>トークナイズ: 文字列 -> トークン列</li>
+        <li>パース: トークン列 -> AST</li>
+        <li>Desuger, ソースの実体をIDに変える: AST -> HIR</li>
+        <li>暗黙的な型変換の明示, UFCS形式へ: HIR -> THIR</li>
+        <li>操作的意味論への変換: THIR -> MIR</li>
+        <li>最適化(不要変数, デッドコード, 定数畳み込み): MIR -> MIR</li>
+        <li>実行: MIR</li>
+      </ul>
+      Unified Function Call Syntax https://cpplover.blogspot.com/2014/11/cunified-call-syntax-n4165-n4174.html
+      
       <h1>2. 型システム</h1>
       <ul>
         <li>プリミティブ型</li>
@@ -57,20 +82,14 @@
         <li>その他</li>
         <ul>
           <li>型推論、型検査は欲しい</li>
-          <li>未定</li>
         </ul>
       </ul>
       <h1>3. メモリ管理</h1>
       ARCに一票.
       <ul>
         <li>GC(Nim,Python): プチフリーズが起きることがある.</li>
-        <li>ARC(Swift,Nim):</li>
-        <li>スマートポインタ(C++): 高速.Dangling Pointerが発生しない.</li>
-        <li>ライフタイム(Rust): 高速.複雑なアノテーションが必要?</li>
-        <li>
-          案1: 基本GC or
-          ARCだが、高速動作のためGCを使わずにスマートポインタのみを用いたバイナリにコンパイル可能
-        </li>
+        <li>ARC(Swift,Nim): そこそこ速い.</li>
+        <li>ライフタイム(Rust): 高速.複雑なアノテーションが必要.</li>
       </ul>
       <h1>4. 文法</h1>
       <ul>
@@ -82,6 +101,7 @@
         <h2>トークン</h2>
         ceylon_lexer::TokenKindで定義.
         <h2>文法定義 (EBNF)</h2>
+        未定
       </ul>
       <h1>5. サンプルコード</h1>
       暫定的なサンプルコードは以下にある。
