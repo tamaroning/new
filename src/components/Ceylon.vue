@@ -10,17 +10,18 @@
       </ul>
       <h2>機能</h2>
       <ul>
-          <li>変数, 関数</li>
-          <li>型システム: 静的型付け, 型検査, 型推論</li>
-          <li>型に対するメソッド定義</li>
-          <li>マクロ</li>
-          <li>名前空間</li>
-          <li>外部ライブラリのインポート</li>
-          <li>FFI</li>
-          <li>ARCによるメモリ管理</li>
-          <li>最適化</li>
-          <li>VM</li>
-          <li>LLVM-IRへの変換が可能(?)</li>
+        <li>変数, 関数</li>
+        <li>型システム: 静的型付け, 型検査, 型推論</li>
+        <li>型に対するメソッド定義</li>
+        <li>マクロ</li>
+        <li>名前空間</li>
+        <li>外部ライブラリのインポート</li>
+        <li>ARCによるメモリ管理</li>
+        <li>最適化</li>
+        <li>VM</li>
+        <li>bitcodeへのコンパイル</li>
+        <li>インクリメンタルコンパイル</li>
+        <li>shebang対応: シェルスクリプトとして利用可能</li>
       </ul>
       <h1>1. コンパイラアーキテクチャ</h1>
       <h2>ソースコード表現</h2>
@@ -46,8 +47,42 @@
         <li>最適化(不要変数, デッドコード, 定数畳み込み): MIR -> MIR</li>
         <li>実行: MIR</li>
       </ul>
-      Unified Function Call Syntax https://cpplover.blogspot.com/2014/11/cunified-call-syntax-n4165-n4174.html
-      
+      <h2>参考</h2>
+      <ul>
+        <li>
+          Unified Function Call Syntax
+          https://cpplover.blogspot.com/2014/11/cunified-call-syntax-n4165-n4174.html
+        </li>
+        <li>
+          Lexical syntax
+          https://github.com/rust-lang/rfcs/blob/master/text/0090-lexical-syntax-simplification.md
+        </li>
+        <li>
+          hir https://github.com/rust-lang/rfcs/blob/master/text/1191-hir.md
+        </li>
+        <li>
+          mir https://github.com/rust-lang/rfcs/blob/master/text/1211-mir.md
+        </li>
+        <li>miri https://github.com/rust-lang/miri</li>
+        <li>
+          closure
+          https://github.com/rust-lang/rfcs/blob/master/text/0114-closures.md
+        </li>
+        <li>
+          stmt and expr
+          https://doc.rust-lang.org/reference/statements-and-expressions.html
+        </li>
+        <li>CPython Bitcode https://docs.python.org/ja/3/library/dis.html</li>
+        <li>Ruby VM https://qiita.com/nownabe/items/47cc5d95e8b4e01205a8</li>
+        <li>
+          Ruby Bitcode ref
+          https://docs.ruby-lang.org/ja/latest/class/RubyVM=3a=3aInstructionSequence.html
+        </li>
+        <li>
+          YARV https://magazine.rubyist.net/articles/0006/0006-YarvManiacs.html
+        </li>
+      </ul>
+
       <h1>2. 型システム</h1>
       <ul>
         <li>プリミティブ型</li>
@@ -95,14 +130,12 @@
       <ul>
         <li>Swift+Rustをイメージ.</li>
         <li>マクロと糖衣構文を活用する.</li>
-        <li>
-          shebangを使うことで,シェルスクリプトのようにメイン関数なしで動作する
-        </li>
-        <h2>トークン</h2>
-        ceylon_lexer::TokenKindで定義.
-        <h2>文法定義 (EBNF)</h2>
-        未定
+        <li>RustのトップレベルはItemsみたい: https://doc.rust-lang.org/reference/items.html</li>
       </ul>
+      <h2>トークン</h2>
+      ceylon_lexer::TokenKindで定義.
+      <h2>文法定義 (EBNF)</h2>
+      未定
       <h1>5. サンプルコード</h1>
       暫定的なサンプルコードは以下にある。
       <el-collapse v-model="activeNames">
@@ -120,30 +153,43 @@
         <el-collapse-item title="変数" name="2">
           <div>
             <pre>
-            func main() -> () {
-              var a = 40; // i32
-              let b = "Hello " + "World" + a.to_string(); // str型
-              println!(a); // macroによってstrもi32も受け付ける
-            }
-          </pre
-            >
+              func main() {
+                var a = 40; // i32
+                let b = "Hello " + "World" + a.to_string(); // str型
+                println!(a); // macroによってstrもi32も受け付ける
+              }
+            </pre>
           </div>
           <div>変数宣言: letはimmutable, varはmutable</div>
         </el-collapse-item>
-        <el-collapse-item title="マクロ" name="3">
+        <el-collapse-item title="関数" name="3">
           <div>
             <pre>
-            macro println($a: expr) {
-              if_macro ty($a) == str {
-                print_str($a);
-              } else_if_macro ty($a) == i32 {
-                print_i32($a);
-              } else_macro {
-                exit(-1);
-              } 
-            }
-          </pre
-            >
+              func main() {
+                add(4, 3);
+              }
+
+              func add(a: i32, b: i32) -> i32{
+                println!("The result is {a+b}");
+                return a + b;
+              }
+            </pre>
+          </div>
+          <div>変数宣言: letはimmutable, varはmutable</div>
+        </el-collapse-item>
+        <el-collapse-item title="マクロ" name="4">
+          <div>
+            <pre>
+              macro println($a: expr) {
+                if_macro ty($a) == str {
+                  print_str($a);
+                } else_if_macro ty($a) == i32 {
+                  print_i32($a);
+                } else_macro {
+                  exit(-1);
+                } 
+              }
+            </pre>
           </div>
           <div>
             マクロを用いることで関数のオーバーロードが出来る。 if_macro,
