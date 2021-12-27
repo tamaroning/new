@@ -3,26 +3,37 @@
     <el-main>
       <h2>やりたいこと</h2>
       <ul>
-        <li>TAPLを読む</li>
         <li>静的型付け言語をつくる</li>
         <li>型推論、型検査器をつくる</li>
-        <li>
-          Rustコンパイラを読む
-          <!--
-          <ul>
-            <li>Parser, Lexer, AST</li>
-            <li>THIR, HIR, 型検査</li>
-            <li>MIR, Borrow checking</li>
-            <li>Queries, Demand-driven compilation</li>
-            <li>Interning</li>
-          </ul>
-          -->
-        </li>
-        <li>CPythonを読む</li>
-        <li>LLVM passを読む</li>
-        <li>ガベージコレクタ、ARCをつくる</li>
+        <li>rustcを読む</li>
+        <li>cargoを読む</li>
+        <li>clippyを読む</li>
+        <li>ガベージコレクタ、ARC</li>
         <li>xv6を読む</li>
         <li>OSS開発</li>
+      </ul>
+      <h2>読んでる本</h2>
+      <ul>
+        <li>並行プログラミング入門</li>
+        <li>TAPL</li>
+        <li>実践機械学習入門</li>
+        <li>Mastering Bitcoin</li>
+      </ul>
+      <h2>読みたい本</h2>
+      <ul>
+        <li></li>
+        <li>コンパイラ 原理と構造</li>
+        <li>Mastering Ethereum</li>
+        <li>Winnyの技術</li>
+      </ul>
+      <h2>読んだ本</h2>
+      <ul>
+        <li>30日でできる! OS自作入門</li>
+        <li>自作エミュレータで学ぶx86アーキテクチャ</li>
+        <li>問題解決力を鍛える! アルゴリズムとデータ構造</li>
+        <li>ハリネズミ本</li>
+        <li>ディジタル回路設計とコンピュータアーキテクチャ</li>
+        <li>Hacking: The Art of Exploitation</li>
       </ul>
     </el-main>
   </el-container>
