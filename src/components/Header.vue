@@ -2,7 +2,8 @@
   <el-container>
     <el-header>
       <el-link href="/">Home</el-link>
-      <el-link href="/portfolio">Profile</el-link>
+      <el-link href="/profile">Profile</el-link>
+      <el-link href="/portfolio">Profile(EN)</el-link>
       <el-link href="https://tamaron.hatenablog.com/">Blog</el-link>
     </el-header>
   </el-container>

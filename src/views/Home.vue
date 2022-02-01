@@ -10,17 +10,19 @@
 </template>
 <script>
 import Top from "../components/Top.vue";
+import Profile from "../components/Profile.vue";
 import Portfolio from "../components/Portfolio.vue";
 //import Ceylon from "../components/Ceylon.vue";
-import Misc from "../components/Misc.vue";
+//import Misc from "../components/Misc.vue";
 
 export default {
   name: "App",
   components: {
     Top,
+    Profile,
     Portfolio,
     //Ceylon,
-    Misc,
+    //Misc,
   },
 };
 </script>

@@ -121,7 +121,7 @@
       <h3>Languages</h3>
       <ul>
         <li><p>Rust</p></li>
-        <li><p>C, C++</p></li>
+        <li><p>C</p></li>
         <li><p>Python</p></li>
         <li><p>Javascript</p></li>
       </ul>
@@ -129,13 +129,24 @@
       <ul>
         <li><p>Git</p></li>
         <li><p>Makefile</p></li>
-        <li><p>Unity</p></li>
         <li><p>Ruby on Rails</p></li>
         <li><p>Vue.js, Nuxt.js</p></li>
       </ul>
 
-      <h2>Contibution</h2>
+      <h2>OSS Contibution</h2>
       <ul>
+        <li>
+          <p>
+            rust-lang/rust-clippy: PR
+            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8372"
+              >#8372</el-link
+            >
+            ,
+            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8382"
+              >#8382</el-link
+            >
+          </p>
+        </li>
         <li>
           <p>
             rust-lang/rust: PR

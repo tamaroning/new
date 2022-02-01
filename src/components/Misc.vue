@@ -1,13 +1,12 @@
 <template>
   <el-container>
     <el-main>
-      <h2>やりたいこと</h2>
+      <h2>そのうちやりたいこと</h2>
       <ul>
         <li>静的型付け言語をつくる</li>
         <li>型推論、型検査器をつくる</li>
         <li>rustcを読む</li>
         <li>cargoを読む</li>
-        <li>clippyを読む</li>
         <li>ガベージコレクタ、ARC</li>
         <li>xv6を読む</li>
         <li>OSS開発</li>
@@ -16,8 +15,7 @@
       <ul>
         <li>並行プログラミング入門</li>
         <li>TAPL</li>
-        <li>実践機械学習入門</li>
-        <li>Mastering Bitcoin</li>
+        <li>パタへね</li>
       </ul>
       <h2>読みたい本</h2>
       <ul>
