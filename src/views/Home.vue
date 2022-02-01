@@ -2,9 +2,10 @@
   <el-container>
     <el-tabs tab-position="left">
       <el-tab-pane label="Top"><Top /></el-tab-pane>
-      <el-tab-pane label="Profile"><Portfolio /></el-tab-pane>
+      <el-tab-pane label="Profile(ja)"><Profile /></el-tab-pane>
+      <el-tab-pane label="Profile(en)"><Portfolio /></el-tab-pane>
       <!--<el-tab-pane label="Ceylon"><Ceylon /></el-tab-pane>-->
-      <el-tab-pane label="Misc"><Misc /></el-tab-pane>
+      <!--<el-tab-pane label="Misc"><Misc /></el-tab-pane>-->
     </el-tabs>
   </el-container>
 </template>
