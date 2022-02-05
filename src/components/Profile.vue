@@ -30,6 +30,9 @@
             <el-link href="https://github.com/rust-lang/rust-clippy/pull/8382"
               >#8382</el-link
             >
+            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8396"
+              >#8396</el-link
+            >
           </p>
         </li>
         <li>
