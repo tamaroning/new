@@ -140,10 +140,22 @@
             rust-lang/rust-clippy: PR
             <el-link href="https://github.com/rust-lang/rust-clippy/pull/8372"
               >#8372</el-link
-            >
-            ,
+            >,
             <el-link href="https://github.com/rust-lang/rust-clippy/pull/8382"
               >#8382</el-link
+            >,
+            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8396"
+              >#8396</el-link
+            >
+            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8453"
+              >#8453</el-link
+            >
+            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8466"
+              >#8466</el-link
+            >
+            , Issue
+            <el-link href="https://github.com/rust-lang/rust-clippy/issues/8424"
+              >#8424</el-link
             >
           </p>
         </li>
@@ -152,7 +164,10 @@
             rust-lang/rust: PR
             <el-link href="https://github.com/rust-lang/rust/pull/90790"
               >#90790</el-link
-            >
+            >,
+            <el-link href="https://github.com/rust-lang/rust/pull/93585"
+              >#93585</el-link
+            >,
           </p>
         </li>
         <li>
