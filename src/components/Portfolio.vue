@@ -137,37 +137,18 @@
       <ul>
         <li>
           <p>
-            rust-lang/rust-clippy: PR
-            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8372"
-              >#8372</el-link
-            >,
-            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8382"
-              >#8382</el-link
-            >,
-            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8396"
-              >#8396</el-link
-            >
-            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8453"
-              >#8453</el-link
-            >
-            <el-link href="https://github.com/rust-lang/rust-clippy/pull/8466"
-              >#8466</el-link
-            >
-            , Issue
-            <el-link href="https://github.com/rust-lang/rust-clippy/issues/8424"
-              >#8424</el-link
+            rust-lang/rust-clippy:
+            <el-link href="https://github.com/rust-lang/rust-clippy/pulls?q=author%3Atamaroning+"
+              > PRs</el-link
             >
           </p>
         </li>
         <li>
           <p>
-            rust-lang/rust: PR
-            <el-link href="https://github.com/rust-lang/rust/pull/90790"
-              >#90790</el-link
-            >,
-            <el-link href="https://github.com/rust-lang/rust/pull/93585"
-              >#93585</el-link
-            >,
+            rust-lang/rust:
+            <el-link href="https://github.com/rust-lang/rust/pulls?q=author%3Atamaroning"
+              > PRs</el-link
+            >
           </p>
         </li>
         <li>
@@ -175,9 +156,8 @@
             richardanaya/tour_of_rust: PR
             <el-link
               href="https://github.com/richardanaya/tour_of_rust/pull/410"
-              >#410</el-link
+              >#410 (translation)</el-link
             >
-            (translation)
           </p>
         </li>
       </ul>
