@@ -17,6 +17,9 @@
       <h2>インターン</h2>
       <ul>
         <li>
+          <p>2022年8月(4 weeks) シンボリック実行フレームワークの調査と研究 at NTT Lab.</p>
+        </li>
+        <li>
           <p>2022年3月(4 weeks) エンジニアインターン at Wantedly, Inc.</p>
         </li>
         <li><p>2021年8月(1 month) インターン at Coincheck, Inc.</p></li>
