@@ -7,8 +7,8 @@
         fit="fill"
       ></el-image>
       <h2>tamaron</h2>
-      <p>京都大学 工学部情報学科 B1</p>
-      <p>Rustと低レイヤが好きです</p>
+      <p>京都大学 工学部情報学科 B2</p>
+      <p>Rustとプログラム解析が好きです</p>
 
       <h2>Links</h2>
       <el-row :gutter="20">
